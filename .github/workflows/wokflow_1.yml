@@ -5,7 +5,7 @@ name : DST
 on :
   push:
     tags:
-      - 'v*'
+      - 'release*'
 jobs:
   job1:
     env: 
@@ -18,7 +18,7 @@ jobs:
       run: |
             echo "La valeur de la variable est ${{ env.VAR1 }}"
   job2:
-    if: always()
+    if: failure()
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
