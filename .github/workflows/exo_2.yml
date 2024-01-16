@@ -6,7 +6,7 @@ on:
 env: 
     A: 25
     B: 10
-    DAY_OF_WEEK: Monday
+
 jobs:
 
   job1:
@@ -17,5 +17,5 @@ jobs:
       uses: actions/checkout@v2
     - name: A et B sont Positive
       run: |
-            ${{env.A}} && ${{env.B}} > 0 ? echo "true" : echo "false"
+            if(${{env.A}} && ${{env.B}} > 0)  echo "true"
   
