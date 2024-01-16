@@ -4,12 +4,13 @@ on:
   workflow_dispatch:
 
 env: 
-      A: 25
-      B: 10
+    A: 25
+    B: 10
+    DAY_OF_WEEK: Monday
 jobs:
 
   job1:
-    if: ${{ vars.A > vars.B}}
+    if: ${{ needs.build.outputs.A > needs.build.outputs.B }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
