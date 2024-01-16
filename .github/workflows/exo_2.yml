@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Affichage de A et B
-    
       run: |
             echo "A = ${{vars.A}} et  B = ${{vars.B}}"
 
