@@ -18,7 +18,7 @@ jobs:
       run: |
             echo "La valeur de la variable est ${{ vars.MYVAR }}"
   job2:
-    if: failure()
+    if: always()
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
