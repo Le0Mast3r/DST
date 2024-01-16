@@ -3,13 +3,10 @@ name : DST
 on: 
   workflow_dispatch:
 
-env: 
-    A: 25
-    B: 10
 jobs:
 
   job1:
-    if: ${{ env.A == 25 }}
+    if: (${{ vars.A > 0 }} && ${{ vars.B > 0 }})
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -17,5 +14,5 @@ jobs:
     - name: Affichage de A et B
     
       run: |
-            echo "A = ${{env.A}} et  B = ${{env.B}}"
+            echo "A = ${{vars.A}} et  B = ${{vars.B}}"
   
