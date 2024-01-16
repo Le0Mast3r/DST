@@ -9,12 +9,12 @@ env:
 jobs:
 
   job1:
-    if: ( needs.build.outputs.A >  needs.build.outputs.B)
+    if: ${{ vars.A > vars.B}}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: A > B
       run: |
-            echo "${{ env.A }} > ${{ env.B }}"
+            echo "${{ vars.A }} > ${{ vars.B }}"
   
