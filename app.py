@@ -1,1 +1,1 @@
-print(' A =  B = '$1)
+print(' A =  B = 'os.sytem())
