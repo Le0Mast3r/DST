@@ -33,4 +33,4 @@ jobs:
 
     - name: Execute le script
       run: |
-        python test.py ${{vars.A}} ${{vars.B}}
+        python app.py ${{vars.A}} ${{vars.B}}
