@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Afficher la valeur de VAR1
       run: |
-            echo "La valeur de la variable est ${{ vars.MYVAR }}"
+            echo "La valeur de la variable est ${{ vars.VAR1 }}"
   job2:
     if: always()
     runs-on: ubuntu-latest
