@@ -17,5 +17,5 @@ jobs:
       uses: actions/checkout@v2
     - name: A et B sont Positive
       run: |
-            if(${{env.A}} && ${{env.B}} > 0)  echo "true"
+            if(${{env.A}} && ${{env.B}} > 0)  {echo "true"}
   
