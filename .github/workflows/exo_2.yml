@@ -9,8 +9,6 @@ jobs:
     if: (${{ vars.A > 0 }} && ${{ vars.B > 0 }})
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
     - name: Affichage de A et B
     
       run: |
