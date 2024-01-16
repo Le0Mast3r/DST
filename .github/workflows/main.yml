@@ -1,0 +1,28 @@
+name : DST
+
+
+
+on :
+  push:
+    tags:
+      - 'v*'
+jobs:
+  job1:
+    env: 
+      VAR1: TEST 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Afficher la valeur de VAR1
+      run: |
+            echo "La valeur de la variable est ${{ vars.MYVAR }}"
+  job2:
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Afficher le message échoué
+      run: |
+            echo "Erreur d'éxecution du job 1"
