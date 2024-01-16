@@ -6,16 +6,16 @@ on:
 env: 
     A: 25
     B: 10
-
 jobs:
 
   job1:
-    if: 
+    if: ${{ env.A == 25 }}
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: A et B sont Positive
+    - name: Affichage de A et B
+    
       run: |
-            if(${{env.A}} && ${{env.B}} > 0)  {echo "true"}
+            echo "A = ${{env.A}} et  B = ${{env.B}}"
   
